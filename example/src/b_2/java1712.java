@@ -1,6 +1,8 @@
-import java.util.*;
+package b_2;
 
-public class Main {
+import java.util.Scanner;
+
+public class java1712 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
