@@ -1,24 +1,26 @@
-import java.util.*;
+package b_2;
 
-public class Main {
+import java.util.Scanner;
 
+public class java15969 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
         int count = in.nextInt();
         int[] list = new int[count];
+
+        int max = 0;
+        int min = 1000;
         for(int i=0; i<count; i++){
             int a = in.nextInt();
-            list[i] = a;
+            list[i]=a;
         }
-
-        int max = list[count-1];
-        int sum = 1;
-
         for(int j=0; j<count; j++){
             if(list[j]>max)
-                sum++;
+                max = list[j];
+            if(list[j]<min)
+                min = list[j];
         }
-        System.out.println(sum);
+        System.out.println(max-min);
     }
 }
