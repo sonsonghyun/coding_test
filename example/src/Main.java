@@ -15,7 +15,7 @@ public class Main {
         for(int j=0; j<b.length(); j++){
             list2[j] = (long)b.charAt(j)-48;
         }
-        int sum = 0;
+        long sum = 0;
         for(int k=0; k<list1.length; k++){
             for(int m=0; m<list2.length; m++){
                 sum+=(a.charAt(k)-48)*(b.charAt(m)-48);
