@@ -5,23 +5,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int count = in.nextInt();
-        int[] list = new int[count];
-        int sum = 1;
-        int max = 0;
-        int max_idx = 0;
-        for (int i = 0; i < count; i++) {
-            list[i] = in.nextInt();
-            if (list[i] > max) {
-                max = list[i];
-                max_idx = i;
-                System.out.println(max_idx);
-            }
+        String a = in.next();
+        String b = in.next();
+        long[] list1 = new long[a.length()];
+        long[] list2 = new long[b.length()];
+        for(int i=0; i<a.length(); i++){
+            list1[i] = (long)a.charAt(i)-48;
         }
-
-        for (int j = 0; j < count; j++) {
-            if (j >= max_idx && list[j]>list[count-1])
-                sum++;
+        for(int j=0; j<b.length(); j++){
+            list2[j] = (long)b.charAt(j)-48;
+        }
+        int sum = 0;
+        for(int k=0; k<list1.length; k++){
+            for(int m=0; m<list2.length; m++){
+                sum+=(a.charAt(k)-48)*(b.charAt(m)-48);
+            }
         }
         System.out.println(sum);
     }
