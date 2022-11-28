@@ -1,7 +1,8 @@
-import java.util.*;
+package b_2;
 
-public class Main {
+import java.util.Scanner;
 
+public class java10093 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -23,16 +24,3 @@ public class Main {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
