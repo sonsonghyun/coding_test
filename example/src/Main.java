@@ -1,50 +1,17 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
-        int l = Integer.parseInt(st.nextToken());
-        int d = Integer.parseInt(st.nextToken());
-        ArrayList<Boolean> sec = new ArrayList<Boolean>();
 
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < l; j++) {
-                sec.add(true);
-            }
+        BigInteger a = scanner.nextBigInteger(2);
+        BigInteger b = scanner.nextBigInteger(2);
 
-            if(i != n-1) {
-                for(int j = 0; j < 5; j++) {
-                    sec.add(false);
-                }
-            }
-        }
+        BigInteger multiply = a.multiply(b);
 
-        int result = 0;
-        while(result < sec.size()) {
-            if(sec.get(result) == false) {
-                break;
-            }
-            result += d;
-        }
-        System.out.println(result);
+        String answer = multiply.toString(2);
+        System.out.println(answer);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
